@@ -3,7 +3,7 @@
 <meta name="description" content="">
 
 <link rel="icon" href="https://raw.githubusercontent.com/Saint-J-Franklin/image-deposit/main/favicon.ico" type="image/x-icon">
-    
+
 <!-- Facebook Meta Tags -->
 <meta property="og:url" content="https://the-vertical.io">
 <meta property="og:type" content="website">
@@ -46,41 +46,67 @@
         }
     /* --- End General CSS --- */
 
-    /* --- Start Navbar --- */
-        .navbar-component .button{
-            padding: 0.625rem 0.75rem;
-            font-size: 0.875rem;
-        }
-        @media (min-width: 992px){
-            .navbar-menu-list{
-                width: 448.91px;
-            }
-            .button-action{
-                transform: translateX(200px);
-                right: 5px;
-            }
-            .navbar-component.navbar-scrolled .button-action{
-                transform: translateX(0px);
-            }
-            .navbar-component.navbar-scrolled .navbar-menu-list{
-                padding-top: 5px;
-                padding-bottom: 5px;
-                padding-left: 24px;
-                padding-right: 5px;
-                gap: 24px;
-                width: 589.051px;
-                height: 52px;
-            }
-            .navbar-component.navbar-scrolled .button-navbar-wrap{
-                opacity: 0;
-                transform: translateX(12px);
-            }
-            .navbar-component.navbar-scrolled .navbar-logo{
-                opacity: 0;
-                transform: translateX(-12px);
-            }
-        }
-    /* --- End Navbar --- */
+/* --- Start Navbar --- */
+.navbar-component .button {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 992px) {
+    .navbar-menu-list {
+        display: flex;
+        justify-content: space-between; /* Répartir les sections uniformément */
+        align-items: center;
+        width: 100%; /* Utiliser toute la largeur disponible */
+        transition: padding-right 0.3s ease, padding-left 0.3s ease;
+    }
+
+    .navlink {
+        flex-grow: 1;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .button-action {
+        position: absolute;
+        right: 12px; /* Positionner le CTA à droite avec un espace par rapport au bord */
+        transform: translateX(200px); /* Hors de la vue initialement */
+        opacity: 0; /* Rendre invisible initialement */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .navbar-component.navbar-scrolled .button-action {
+        transform: translateX(0); /* Positionner le bouton CTA lorsqu'il entre */
+        opacity: 1; /* Rendre visible le CTA lorsqu'on scrolle */
+    }
+
+    .navbar-component.navbar-scrolled .navbar-menu-list {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 24px;
+        padding-right: 160px; /* Ajuster pour faire plus de place au CTA */
+        gap: 24px; /* Espace entre les sections */
+        width: 100%; /* Conserver la largeur maximale */
+        height: 52px;
+    }
+
+    .navbar-component.navbar-scrolled .navlink {
+        transform: translateX(-10px); /* Ajuster légèrement le déplacement pour éviter le décalage */
+    }
+
+    .navbar-component.navbar-scrolled .button-navbar-wrap {
+        opacity: 0;
+        transform: translateX(12px);
+    }
+
+    .navbar-component.navbar-scrolled .navbar-logo {
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+}
+/* --- End Navbar --- */
+
+
 
     /* --- Start Hero Section --- */
         .hero-ellipse div{
@@ -716,7 +742,8 @@ body {
             </g>
         </svg>
     </div>       
-</div></a><nav role="navigation" class="navbar-menu-holder w-nav-menu"><div class="navbar-menu-list"><a href="#section-solution" class="navlink w-inline-block"><div class="navlink-text">Notre Solution</div><div class="menu_link-bg"></div></a><a href="#section-cases" class="navlink w-inline-block"><div class="navlink-text">Case Studies</div><div class="menu_link-bg"></div></a><a href="#section-realisations" class="navlink w-inline-block"><div class="navlink-text">Le Processus</div><div class="menu_link-bg"></div></a><a href="#section-faq" class="navlink w-inline-block"><div class="navlink-text">F.A.Q</div><div class="menu_link-bg"></div></a><a href="https://calendly.com/spherix-support/call" class="button-action w-button">Réserver un appel</a><div class="menu_shape"><div class="menu_shape-bg"></div></div></div></nav><div class="navbar-button-wrap"><div class="button-navbar-wrap"><a href="https://calendly.com/spherix-support/call" class="button_test size-is-small w-button">Réserver un appel</a></div></div><div class="menu-button w-nav-button"><div class="menu-button-inner"><div class="menu-line"></div><div class="menu-line"></div><div class="menu-line"></div></div></div></div></div><main class="main-wrapper"><section id="section-hero" class="section hero"><div class="pd-section-large relative"><div class="padding-global"><div class="container-1132 text-center"><h1 data-gsap="an4">Automatisez votre business, concentrez-vous sur l'essentiel</h1><div class="mt-24"><div class="mw-500 center"><p class="text-light-63">Automatisez tout : setters, closers, campagnes, tunnels. Concentrez-vous sur le contenu et l'engagement client.</p></div></div><div class="mt-40"><div class="button-group"><a href="https://calendly.com/spherix-support/call" class="button_test w-button">Réserver un appel</a></div></div><div class="mt-64 mt-md-40"><div class="hero-holder hidden"><div class="hero-wrapper"><div class="hero-inner"><div class="w-video w-embed"></div></div></div></div></div></div></div></div><div id="w-node-_906df1dd-1184-5cc5-17ee-e19fcf755137-7104d1ca" class="trust-block"></div><div class="trust-block stroke"><div class="trust-picture"></div></div></div></div></div></div><div class="bg-wrap center-top"><div class="hero-ellipse"><div></div><div></div></div><div class="hero-vector"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 594 652" fill="none"><path d="M0 651.167C0 651.167 458 606.667 524.5 186.667C591 -233.333 594 186.667 594 186.667V651.167H0Z" fill="#001f3f" fill-opacity="0.05"></path></svg><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 594 651" fill="none"><path d="M594 651C594 651 135.5 606.511 69 186.619C2.5 -233.274 0 186.619 0 186.619V651H594Z" fill="#001f3f" fill-opacity="0.05"></path></svg></div><div class="hero-light"><div class="hide-mobile"></div><div class="hide-mobile"></div></div><div class="hero-big-light hide-mobile"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1440 1316" fill="none"><g filter="url(#filter0_f_1_1621)"><path d="M959.62 1077.22C1066.91 1014.61 1151.66 911.933 1199.43 786.671C1247.2 661.41 1255.03 521.318 1221.59 390.267C1188.15 259.216 1115.51 145.314 1016.04 67.9675C916.569 -9.37872 796.43 -45.383 676.091 -33.9107C555.751 -22.4384 442.657 35.8007 356.078 130.883C269.499 225.966 214.792 352.009 201.278 487.536C187.765 623.064 216.281 759.69 281.968 874.136C347.654 988.581 446.448 1073.77 561.514 1115.17L622.657 898.485C551.982 873.052 491.302 820.731 450.957 750.437C410.611 680.144 393.096 596.227 401.397 512.985C409.697 429.742 443.298 352.326 496.476 293.925C549.653 235.524 619.117 199.754 693.03 192.707C766.944 185.661 840.734 207.775 901.829 255.282C962.923 302.788 1007.54 372.748 1028.08 453.241C1048.62 533.734 1043.81 619.779 1014.47 696.716C985.13 773.653 933.076 836.721 867.177 875.174L959.62 1077.22Z" fill="url(#paint0_radial_1_1621)" fill-opacity="0.1"></path></g><defs><filter id="filter0_f_1_1621" x="-2.00092" y="-236.001" width="1444"height="155117"filterUnits="userSpaceOnUse"color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"><feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"result="shape"><feBlend><feGaussianBlur stdDeviation="100"result="effect1_foregroundBlur_1_1621"></feGaussianBlur></filter><radialGradient id="paint0_radial_1_1621" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 536) rotate(86.9059) scale(537.283 475.762)"><stop stop-color="#0000FF" stop-opacity="0.2"></stop><stop offset="1" stop-color="#4C2BA8"></stop></radialGradient></defs></svg></div><div class="hero-rectangle"></div><div class="hero-mask"></div><div class="sky"><div class="stars"></div><div class="stars1"></div><div class="stars2"></div></div></div></section><section id="section-realisations" class="section"><div class="bg-wrap hide-mobile"><div class="bg-blur top-0"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1126 784" fill="none"><path d="M6.10352e-05 0.499923C7.00301e-05 103.391 14.5625 205.274 42.8559 300.332C71.1493 395.391 112.62 481.763 164.899 554.518C217.178 627.273 279.243 684.985 347.549 724.36C415.856 763.734 489.066 784 563 784C636.934 784 710.145 763.734 778.451 724.359C846.757 684.985 908.822 627.273 961.101 554.518C1013.38 481.763 1054.85 395.391 1083.14 300.332C1111.44 205.274 1126 103.39 1126 0.499756L909.796 0.499801C909.796 63.8783 900.826 126.636 883.398 185.19C865.97 243.744 840.425 296.948 808.222 341.763C776.019 386.579 737.788 422.128 695.713 446.382C653.638 470.636 608.542 483.12 563 483.12C517.458 483.12 472.362 470.636 430.287 446.382C388.212 422.128 349.981 386.579 317.778 341.764C285.575 296.948 260.03 243.745 242.602 185.19C225.174 126.636 216.204 63.8784 216.204 0.499904L6.10352e-05 0.499923Z" fill="url(#paint0_radial_2267_738)" fill-opacity="0.15"></path><defs><radialGradient id="paint0_radial_2267_738" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(606.767 -202.666) rotate(-88.6125) scale(501.931 304.12)"><stop stop-color="#0000FF" stop-opacity="0.2"></stop><stop offset="1" stop-color="#4C2BA8"></stop></radialGradient></defs></svg></div></div>
+</div></a><nav role="navigation" class="navbar-menu-holder w-nav-menu"><div class="navbar-menu-list"><a href="#section-solution" class="navlink w-inline-block"><div class="navlink-text">Les Features</div><div class="menu_link-bg"></div></a><a href="#section-realisations" class="navlink w-inline-block"><div class="navlink-text">Process</div><div class="menu_link-bg"></div></a><a href="#section-faq" class="navlink w-inline-block"><div class="navlink-text">F.A.Q</div><div class="menu_link-bg"></div></a><a href="https://calendly.com/spherix-support/call" class="button-action w-button">Réserver un appel</a><div class="menu_shape"><div class="menu_shape-bg"></div></div></div></nav><div class="navbar-button-wrap"><div class="button-navbar-wrap"><a href="https://calendly.com/spherix-support/call" class="button_test size-is-small w-button">Réserver un appel</a></div></div><div class="menu-button w-nav-button"><div class="menu-button-inner"><div class="menu-line"></div><div class="menu-line"></div><div class="menu-line"></div></div></div>
+</div></div><main class="main-wrapper"><section id="section-hero" class="section hero"><div class="pd-section-large relative"><div class="padding-global"><div class="container-1132 text-center"><h1 data-gsap="an4">Automatisez votre business, concentrez-vous sur l'essentiel</h1><div class="mt-24"><div class="mw-500 center"><p class="text-light-63">Automatisez tout : setters, closers, campagnes, tunnels. Concentrez-vous sur le contenu et l'engagement client.</p></div></div><div class="mt-40"><div class="button-group"><a href="https://calendly.com/spherix-support/call" class="button_test w-button">Réserver un appel</a></div></div><div class="mt-64 mt-md-40"><div class="hero-holder hidden"><div class="hero-wrapper"><div class="hero-inner"><div class="w-video w-embed"></div></div></div></div></div></div></div></div><div id="w-node-_906df1dd-1184-5cc5-17ee-e19fcf755137-7104d1ca" class="trust-block"></div><div class="trust-block stroke"><div class="trust-picture"></div></div></div></div></div></div><div class="bg-wrap center-top"><div class="hero-ellipse"><div></div><div></div></div><div class="hero-vector"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 594 652" fill="none"><path d="M0 651.167C0 651.167 458 606.667 524.5 186.667C591 -233.333 594 186.667 594 186.667V651.167H0Z" fill="#001f3f" fill-opacity="0.05"></path></svg><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 594 651" fill="none"><path d="M594 651C594 651 135.5 606.511 69 186.619C2.5 -233.274 0 186.619 0 186.619V651H594Z" fill="#001f3f" fill-opacity="0.05"></path></svg></div><div class="hero-light"><div class="hide-mobile"></div><div class="hide-mobile"></div></div><div class="hero-big-light hide-mobile"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1440 1316" fill="none"><g filter="url(#filter0_f_1_1621)"><path d="M959.62 1077.22C1066.91 1014.61 1151.66 911.933 1199.43 786.671C1247.2 661.41 1255.03 521.318 1221.59 390.267C1188.15 259.216 1115.51 145.314 1016.04 67.9675C916.569 -9.37872 796.43 -45.383 676.091 -33.9107C555.751 -22.4384 442.657 35.8007 356.078 130.883C269.499 225.966 214.792 352.009 201.278 487.536C187.765 623.064 216.281 759.69 281.968 874.136C347.654 988.581 446.448 1073.77 561.514 1115.17L622.657 898.485C551.982 873.052 491.302 820.731 450.957 750.437C410.611 680.144 393.096 596.227 401.397 512.985C409.697 429.742 443.298 352.326 496.476 293.925C549.653 235.524 619.117 199.754 693.03 192.707C766.944 185.661 840.734 207.775 901.829 255.282C962.923 302.788 1007.54 372.748 1028.08 453.241C1048.62 533.734 1043.81 619.779 1014.47 696.716C985.13 773.653 933.076 836.721 867.177 875.174L959.62 1077.22Z" fill="url(#paint0_radial_1_1621)" fill-opacity="0.1"></path></g><defs><filter id="filter0_f_1_1621" x="-2.00092" y="-236.001" width="1444"height="155117"filterUnits="userSpaceOnUse"color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"><feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"result="shape"><feBlend><feGaussianBlur stdDeviation="100"result="effect1_foregroundBlur_1_1621"></feGaussianBlur></filter><radialGradient id="paint0_radial_1_1621" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 536) rotate(86.9059) scale(537.283 475.762)"><stop stop-color="#0000FF" stop-opacity="0.2"></stop><stop offset="1" stop-color="#4C2BA8"></stop></radialGradient></defs></svg></div><div class="hero-rectangle"></div><div class="hero-mask"></div><div class="sky"><div class="stars"></div><div class="stars1"></div><div class="stars2"></div></div></div></section><section id="section-realisations" class="section"><div class="bg-wrap hide-mobile"><div class="bg-blur top-0"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1126 784" fill="none"><path d="M6.10352e-05 0.499923C7.00301e-05 103.391 14.5625 205.274 42.8559 300.332C71.1493 395.391 112.62 481.763 164.899 554.518C217.178 627.273 279.243 684.985 347.549 724.36C415.856 763.734 489.066 784 563 784C636.934 784 710.145 763.734 778.451 724.359C846.757 684.985 908.822 627.273 961.101 554.518C1013.38 481.763 1054.85 395.391 1083.14 300.332C1111.44 205.274 1126 103.39 1126 0.499756L909.796 0.499801C909.796 63.8783 900.826 126.636 883.398 185.19C865.97 243.744 840.425 296.948 808.222 341.763C776.019 386.579 737.788 422.128 695.713 446.382C653.638 470.636 608.542 483.12 563 483.12C517.458 483.12 472.362 470.636 430.287 446.382C388.212 422.128 349.981 386.579 317.778 341.764C285.575 296.948 260.03 243.745 242.602 185.19C225.174 126.636 216.204 63.8784 216.204 0.499904L6.10352e-05 0.499923Z" fill="url(#paint0_radial_2267_738)" fill-opacity="0.15"></path><defs><radialGradient id="paint0_radial_2267_738" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(606.767 -202.666) rotate(-88.6125) scale(501.931 304.12)"><stop stop-color="#0000FF" stop-opacity="0.2"></stop><stop offset="1" stop-color="#4C2BA8"></stop></radialGradient></defs></svg></div></div>
   <div class="pd-section-large"><div class="padding-global"><div class="container-996"><div class="container-small text-center"><h2>Boostez vos résultats avec l'automatisation</h2><div class="mt-24"><div class="mw-500 center"><p class="text-light-63">Conçu par des coachs pour des coachs, notre SaaS automatise le recrutement, la gestion des campagnes, et la conversion des prospects en clients. Plus de tâches chronophages, plus de résultats.</p></div></div>
 </div><div class="mt-72"><div class="grid-2"><div id="w-node-_15c12a37-1a2e-8157-1f51-be072d17f070-7104d1ca" class="card"><div class="illustration-wrap" style="text-align: center;"><img src="https://raw.githubusercontent.com/Saint-J-Franklin/image-deposit/main/forms.webp" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 89vw, 41vw" srcset="https://raw.githubusercontent.com/Saint-J-Franklin/image-deposit/main/forms.webp 500w, https://raw.githubusercontent.com/Saint-J-Franklin/image-deposit/main/forms.webp 800w, https://raw.githubusercontent.com/Saint-J-Franklin/image-deposit/main/forms.webp 1080w, https://raw.githubusercontent.com/Saint-J-Franklin/image-deposit/main/forms.webp 1338w" alt="" style="max-width: 70%; max-height: 350px; height: auto;"/></div><div class="card-text-wrap"><div class="flex-h gap-6">
   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><g fill="white"><path d="M176 128a48 48 0 1 1-48-48a48 48 0 0 1 48 48" opacity="0.2"/><path d="M221.87 83.16A104.1 104.1 0 1 1 195.67 49l22.67-22.68a8 8 0 0 1 11.32 11.32l-96 96a8 8 0 0 1-11.32-11.32l27.72-27.72a40 40 0 1 0 17.87 31.09a8 8 0 1 1 16-.9a56 56 0 1 1-22.38-41.65l22.75-22.75a87.88 87.88 0 1 0 23.13 29.67a8 8 0 0 1 14.44-6.9"/></g></svg>
